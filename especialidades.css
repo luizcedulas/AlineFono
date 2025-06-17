@@ -1,0 +1,135 @@
+.especialidades-section {
+    background-image: url("img/bonecaempe.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 40px 0;
+    position: relative;
+}
+
+.especialidades-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+.especialidades-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 35px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.card-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha os cards pelo topo */
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px; /* Aumentei a largura para melhor visualização */
+    min-height: 150px; /* Altura mínima para o card */
+    border-radius: 15px;
+    background-color: #ffffff;
+    border: 3px solid var(--main-color);
+    padding: 25px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(112, 63, 134, 0.15);
+}
+
+.card:hover {
+    min-height: 280px; /* Aumenta a altura no hover para mostrar a descrição */
+    cursor: pointer;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(112, 63, 134, 0.3);
+}
+
+.card img {
+    width: 50px; /* Aumentei o tamanho do ícone */
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.card .descricao {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #555;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.2s; /* Adicionei um delay para a opacidade */
+    text-align: center;
+    text-transform: none; /* Remove capitalize para a descrição */
+}
+
+.card:hover .descricao {
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .especialidades-section h1 {
+        font-size: 2rem;
+    }
+    .card-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+        max-width: 300px;
+    }
+    .card:hover {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .especialidades-section {
+        padding: 20px 0;
+    }
+    .especialidades-section h1 {
+        font-size: 1.8rem;
+    }
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+    .card img {
+        width: 40px;
+        height: 40px;
+    }
+    .card p {
+        font-size: 1.1rem;
+    }
+    .card .descricao {
+        font-size: 0.9rem;
+    }
+    .card:hover {
+        min-height: 220px;
+    }
+}

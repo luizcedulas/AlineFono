@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="faq.css">
+    <title>Perguntas Frequentes - Aline Fono</title>
+</head>
+<body>
+
+    <section class="inicio" id="home">
+        <div class="hero">
+            <a href="index.html"><img src="img/logotextosemf.png" alt="Logo Aline Rodrigues Fonoaudiologia"></a>
+            <h1>Fonoaudiologia</h1>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-title">Perguntas Frequentes</h2>
+
+            <div class="faq-container">
+                <!-- Pergunta 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quais condições a fonoaudiologia trata?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Casos como: atraso na fala, gagueira, disfagia (dificuldade para engolir), alterações na voz (rouquidão), apraxia, autismo, e reabilitação pós-AVC.</p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como agendar uma consulta?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Você pode agendar por telefone <strong>(61) +55 9626-0860</strong>, WhatsApp.</p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Qual a idade mínima para atendimento?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Bebês a partir de 6 meses (para avaliação de desenvolvimento) até idosos.</p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quanto tempo dura cada sessão?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Em média, 45 minutos (variando conforme o tratamento). A primeira consulta (avaliação) pode durar até 1h30.</p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>É necessário encaminhamento médico?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Para consultas particulares, não é obrigatório, mas recomendo avaliação médica prévia em alguns casos.</p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 8 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Há atendimento domiciliar?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, para casos específicos (como pacientes acamados). Consulte disponibilidade e valores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão de volta -->
+            <div class="navegacao-volta">
+                <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript para mostrar/esconder respostas
+        document.querySelectorAll(".faq-question").forEach(question => {
+            question.addEventListener("click", () => {
+                const answer = question.nextElementSibling;
+                const toggle = question.querySelector(".faq-toggle");
+                
+                answer.classList.toggle("active");
+                toggle.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>
+

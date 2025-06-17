@@ -1,0 +1,130 @@
+/* Estilos específicos para a página Sobre Mim */
+
+.sobre-section {
+    background-image: url("img/bonecaempe.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 40px 0;
+    position: relative;
+}
+
+.sobre-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+.sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.texto {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.texto h1 {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.texto h1 .destaque {
+    color: #8861a7; /* Um tom mais claro de roxo para destaque */
+}
+
+.texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.highlight {
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(112, 63, 134, 0.3);
+}
+
+.highlight:hover {
+    background-color: #3e1e58;
+}
+
+.highlight p {
+    margin-bottom: 0;
+    color: white;
+}
+
+.foto {
+    flex-shrink: 0;
+}
+
+.foto img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.foto img:hover {
+    transform: scale(1.03);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .texto {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .foto img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .texto h1 {
+        font-size: 2.5rem;
+    }
+    .texto p {
+        font-size: 1rem;
+    }
+    .sobre-section {
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto h1 {
+        font-size: 2rem;
+    }
+    .sobre-section {
+        padding: 20px 0;
+    }
+    .sobre-content {
+        padding: 0 15px;
+    }
+}

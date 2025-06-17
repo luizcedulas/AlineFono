@@ -1,0 +1,134 @@
+/* Estilos específicos para a página de Perguntas Frequentes (FAQ) */
+
+.faq-section {
+    background-image: url("img/bonecaempe.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 40px 0;
+    position: relative;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 30px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(112, 63, 134, 0.1);
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--main-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(112, 63, 134, 0.2);
+}
+
+.faq-question {
+    background-color: var(--main-color);
+    color: white;
+    padding: 18px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #3e1e58;
+}
+
+.faq-answer {
+    padding: 20px 25px;
+    display: none;
+    background: #ffffff;
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.faq-toggle {
+    font-size: 24px;
+    transition: transform 0.3s;
+    font-weight: normal;
+}
+
+.faq-toggle.active {
+    transform: rotate(45deg);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .faq-title {
+        font-size: 2.5rem;
+    }
+    .faq-question {
+        font-size: 1rem;
+        padding: 15px 20px;
+    }
+    .faq-answer {
+        padding: 15px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-section {
+        padding: 20px 0;
+    }
+    .faq-title {
+        font-size: 2rem;
+    }
+    .faq-container {
+        padding: 0 15px;
+    }
+    .faq-question {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+    }
+    .faq-answer {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    .faq-toggle {
+        font-size: 20px;
+    }
+}

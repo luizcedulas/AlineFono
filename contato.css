@@ -1,0 +1,289 @@
+/* Estilos específicos para a página de contato */
+
+.contato-section {
+    background-image: url("img/bonecaempe.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 40px 0;
+    position: relative;
+}
+
+.contato-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.contato-section h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.contato-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(112, 63, 134, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contato-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--main-color), #3e1e58);
+}
+
+.contato-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(112, 63, 134, 0.2);
+    border-color: var(--main-color);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.card-header h3 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.cargo {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.localizacao {
+    font-size: 1rem;
+    color: #888;
+    font-weight: 400;
+}
+
+.card-content {
+    text-align: center;
+}
+
+.descricao {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.objetivo {
+    font-size: 1rem;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.contato-item:hover {
+    background: var(--main-color);
+    color: white;
+    transform: translateX(5px);
+    border-color: var(--main-color);
+}
+
+.contato-item:hover .value {
+    opacity: 1;
+}
+
+.contato-item .icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.contato-item .info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contato-item .label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.contato-item .value {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.whatsapp:hover {
+    background: #25D366 !important;
+    border-color: #25D366 !important;
+}
+
+.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%) !important;
+    border-color: #e6683c !important;
+}
+
+.navegacao-volta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-voltar {
+    background-color: var(--main-color);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(112, 63, 134, 0.3);
+}
+
+.btn-voltar:hover {
+    background-color: #3e1e58;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(112, 63, 134, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contato-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contato-section h2 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+    
+    .contato-card {
+        padding: 20px;
+    }
+    
+    .card-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .contato-item {
+        padding: 12px;
+    }
+    
+    .contato-item .icon {
+        font-size: 1.3rem;
+        margin-right: 12px;
+        min-width: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .contato-section {
+        padding: 20px 0;
+    }
+    
+    .contato-section h2 {
+        font-size: 2rem;
+    }
+    
+    .contato-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .contato-card {
+        padding: 15px;
+    }
+    
+    .contato-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .contato-item .icon {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    
+    .contato-item .info {
+        text-align: center;
+    }
+}
+

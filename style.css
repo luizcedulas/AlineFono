@@ -1,0 +1,156 @@
+:root{
+  --main-color: #703f86;
+  --bg: #fff;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.inicio {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.hero {
+    background-color: #d8d6d8;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero h1 {
+    margin-left: 900px;
+    font-size: 3rem;
+    color: var(--main-color);
+    text-align: left;
+    display: none; /* Escondendo o texto pois a nova logo já inclui o texto */
+}
+.hero img {
+  display: block;
+  width: auto;
+  height: 180px;
+  margin: 10px auto;
+}
+
+.navegacao {
+    margin-top: 0;
+    background-image: url("img/bonecaempe.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Adicionado para consistência */
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* --- ALTERAÇÃO ADICIONADA AQUI --- */
+.navegacao::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+.navegacao .conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding-left: 5%;
+    position: relative; /* Adicionado para controle de empilhamento */
+    z-index: 2;      /* Adicionado para ficar sobre a camada ::before */
+}
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.botoes a {
+    background-color: var(--main-color);
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+}
+
+.botoes a:hover {
+    background-color: #3e1e58;
+}
+
+/* Estilos compartilhados para todas as páginas */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.navegacao-volta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-voltar {
+    background-color: var(--main-color);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(112, 63, 134, 0.3);
+}
+
+.btn-voltar:hover {
+    background-color: #3e1e58;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(112, 63, 134, 0.4);
+}
+
+/* Responsividade geral */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .btn-voltar {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .btn-voltar {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
